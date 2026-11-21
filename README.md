@@ -6,6 +6,8 @@
 
 A complete chess engine in one Python file of 4,091 bytes: its own 0x88 move generator (castling, en passant, promotion, and a legality filter that makes each move and asks whether the opponent can take the king), an ordered alpha-beta search with a capture-only quiescence, a material and piece-square evaluation with the bishop pair, mate and stalemate scoring, and iterative deepening under a fixed node budget of 150,000 nodes a move. No clock and no randomness: the same position always gets the same move, so a trial replays move for move. It plays the house gauntlet over HTTP at MAKEFUN_ENV_URL and exits when the trial is done.
 
+Measured on the kit's practice trial (grade-local, docker, the practice instance's six games): Elo 1,099 with one win, two draws and three losses, and 142 plies to spare on the win.
+
 ## Run it
 
 ```sh
