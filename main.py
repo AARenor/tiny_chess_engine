@@ -125,7 +125,7 @@ def ab(d,a,b,ply):
  return(atk(kg[stm])and-IM+ply or 0)if best==sp else best
 def think(fen,legal):
  global nodes
- nodes=0;load(fen)
+ nodes=0;K[:]=[0]*64;load(fen)
  sq=lambda s:ord(s[0])-97+(int(s[1])-1)*16
  ms=[(sq(m[:2]),sq(m[2:4]),5 if len(m)>4 else 0,m) for m in legal]
  best=ms[0][3];order=[*range(len(ms))]
